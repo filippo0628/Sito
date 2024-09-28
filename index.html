@@ -6,7 +6,11 @@
     <title>FactionBot - Il tuo bot Discord per la gestione finanziaria</title>
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- AOS CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -15,135 +19,208 @@
     ⚠️ FactionBot è attualmente in fase di sviluppo. Alcune funzionalità potrebbero essere incomplete o soggette a modifiche.
 </div>
 
-<header>
-    <h1>FactionBot</h1>
-    <p>Il tuo bot Discord per la gestione finanziaria realistica</p>
+<!-- Toggle Modalità Scura/Chiara -->
+<div class="theme-toggle">
+    <input type="checkbox" id="theme-switch" />
+    <label for="theme-switch" class="toggle-label">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <span class="toggle-ball"></span>
+    </label>
+</div>
+
+<header data-aos="fade-down">
+    <div class="header-content">
+        <h1>FactionBot</h1>
+        <p>Il tuo bot Discord per la gestione finanziaria realistica</p>
+        <a href="#iniziare" class="button"><span>Inizia Ora</span></a>
+    </div>
 </header>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#caratteristiche">Caratteristiche</a>
-    <a href="#iniziare">Come Iniziare</a>
-    <a href="#supporto">Supporto</a>
-    <a href="#tos">Terms of Service</a>
-    <a href="#privacy">Privacy Policy</a>
+    <div class="nav-container">
+        <a href="#home" data-aos="fade-right">Home</a>
+        <a href="#caratteristiche" data-aos="fade-right" data-aos-delay="100">Caratteristiche</a>
+        <a href="#iniziare" data-aos="fade-right" data-aos-delay="200">Come Iniziare</a>
+        <a href="#supporto" data-aos="fade-right" data-aos-delay="300">Supporto</a>
+        <a href="#tos" data-aos="fade-right" data-aos-delay="400">Terms of Service</a>
+        <a href="#privacy" data-aos="fade-right" data-aos-delay="500">Privacy Policy</a>
+    </div>
 </nav>
 
 <div class="container">
 
     <!-- Home Section -->
-    <section class="section" id="home">
-        <h2>Benvenuto in FactionBot</h2>
-        <p>
-            **FactionBot** è un potente bot Discord progettato per gestire e automatizzare la contabilità all'interno di server a tema criminale o giochi di ruolo. Offre una serie di funzionalità avanzate che permettono agli amministratori e ai membri di monitorare e gestire gli stipendi dei rapinatori in modo efficiente e personalizzato.
-        </p>
-        <a href="#iniziare" class="button">Inizia Ora</a>
+    <section class="section" id="home" data-aos="fade-up">
+        <div class="section-content">
+            <h2>Benvenuto in FactionBot</h2>
+            <p>
+                <strong>FactionBot</strong> è un potente bot Discord progettato per gestire e automatizzare la contabilità all'interno di server a tema criminale o giochi di ruolo. Offre una serie di funzionalità avanzate che permettono agli amministratori e ai membri di monitorare e gestire gli stipendi dei rapinatori in modo efficiente e personalizzato.
+            </p>
+            <a href="#iniziare" class="button"><span>Inizia Ora</span></a>
+        </div>
     </section>
 
     <!-- Caratteristiche Section -->
-    <section class="section" id="caratteristiche">
-        <h2>Caratteristiche Principali</h2>
-        <ul>
-            <li><strong>Gestione degli Stipendi:</strong> Calcolo percentuale e per intervalli dei guadagni.</li>
-            <li><strong>Configurazione Personalizzata per Ruolo:</strong> Imposta diverse percentuali e intervalli per ruoli specifici.</li>
-            <li><strong>Tracciamento delle Rapine:</strong> Registra le rapine e gestisci fondi comuni di "soldi sporchi" e "soldi puliti".</li>
-            <li><strong>Comandi Intuitivi:</strong> Comandi facili da usare come <code>/stipendi</code>, <code>/config_stipendi_percentuale</code>, e <code>/config_stipendi_intervallo</code>.</li>
-            <li><strong>Interfaccia User-Friendly:</strong> Embed visivi e pulsanti interattivi per una navigazione semplice.</li>
-            <li><strong>Sicurezza e Permessi:</strong> Gestione sicura dei permessi e utilizzo degli Intents Privilegiati di Discord.</li>
-        </ul>
+    <section class="section" id="caratteristiche" data-aos="fade-up">
+        <div class="section-content">
+            <h2>Caratteristiche Principali</h2>
+            <ul class="features-list">
+                <li><i class="fas fa-dollar-sign"></i><strong>Gestione degli Stipendi:</strong> Calcolo percentuale e per intervalli dei guadagni.</li>
+                <li><i class="fas fa-user-cog"></i><strong>Configurazione Personalizzata per Ruolo:</strong> Imposta diverse percentuali e intervalli per ruoli specifici.</li>
+                <li><i class="fas fa-chart-line"></i><strong>Tracciamento delle Rapine:</strong> Registra le rapine e gestisci fondi comuni di "soldi sporchi" e "soldi puliti".</li>
+                <li><i class="fas fa-terminal"></i><strong>Comandi Intuitivi:</strong> Comandi facili da usare come <code>/stipendi</code>, <code>/config_stipendi_percentuale</code>, e <code>/config_stipendi_intervallo</code>.</li>
+                <li><i class="fas fa-user-friends"></i><strong>Interfaccia User-Friendly:</strong> Embed visivi e pulsanti interattivi per una navigazione semplice.</li>
+                <li><i class="fas fa-shield-alt"></i><strong>Sicurezza e Permessi:</strong> Gestione sicura dei permessi e utilizzo degli Intents Privilegiati di Discord.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Come Iniziare Section -->
-    <section class="section" id="iniziare">
-        <h2>Come Iniziare</h2>
-        <ol>
-            <li>
-                <strong>Invita il Bot al Tuo Server:</strong>
-                <p>
-                    Utilizza il seguente link per entrare nel discord di <strong>FactionBot</strong>
-                </p>
-                <a href="https://discord.gg/syq98Cyryx" class="button">Invita FactionBot</a>
-            </li>
-            <li>
-                <strong>Configura le Percentuali e gli Intervalli:</strong>
-                <p>
-                    Usa i comandi <code>/config_stipendi_percentuale</code> e <code>/config_stipendi_intervallo</code> per impostare le configurazioni finanziarie per i vari ruoli.
-                </p>
-            </li>
-            <li>
-                <strong>Traccia le Rapine:</strong>
-                <p>
-                    Registra le rapine effettuate utilizzando i comandi appropriati per tenere traccia dei guadagni e aggiornare i fondi comuni.
-                </p>
-            </li>
-            <li>
-                <strong>Visualizza gli Stipendi:</strong>
-                <p>
-                    Utilizza il comando <code>/stipendi</code> per vedere una panoramica degli stipendi calcolati per ogni rapinatore in base alle configurazioni impostate.
-                </p>
-            </li>
-        </ol>
+    <section class="section" id="iniziare" data-aos="fade-up">
+        <div class="section-content">
+            <h2>Come Iniziare</h2>
+            <ol class="steps-list">
+                <li>
+                    <strong>Invita il Bot al Tuo Server:</strong>
+                    <p>
+                        Utilizza il seguente link per entrare nel Discord di <strong>FactionBot</strong>
+                    </p>
+                    <a href="https://discord.gg/syq98Cyryx" class="button"><span>Invita FactionBot</span></a>
+                </li>
+                <li>
+                    <strong>Configura le Percentuali e gli Intervalli:</strong>
+                    <p>
+                        Usa i comandi <code>/config_stipendi_percentuale</code> e <code>/config_stipendi_intervallo</code> per impostare le configurazioni finanziarie per i vari ruoli.
+                    </p>
+                </li>
+                <li>
+                    <strong>Traccia le Rapine:</strong>
+                    <p>
+                        Registra le rapine effettuate utilizzando i comandi appropriati per tenere traccia dei guadagni e aggiornare i fondi comuni.
+                    </p>
+                </li>
+                <li>
+                    <strong>Visualizza gli Stipendi:</strong>
+                    <p>
+                        Utilizza il comando <code>/stipendi</code> per vedere una panoramica degli stipendi calcolati per ogni rapinatore in base alle configurazioni impostate.
+                    </p>
+                </li>
+            </ol>
+        </div>
     </section>
 
     <!-- Supporto Section -->
-    <section class="section" id="supporto">
-        <h2>Supporto e Documentazione</h2>
-        <p>
-            Per ulteriori dettagli sull'uso dei comandi, configurazioni avanzate o per segnalare eventuali problemi, puoi consultare la documentazione inclusa o contattare il supporto tramite il <a href="https://discord.gg/syq98Cyryx" class="support-link">server Discord ufficiale di FactionBot</a>.
-        </p>
-        <p>
-            **Nota:** Poiché FactionBot è ancora in fase di sviluppo, ti invitiamo a unirti al nostro server Discord per ricevere aggiornamenti, fornire feedback e contribuire al miglioramento del bot.
-        </p>
+    <section class="section" id="supporto" data-aos="fade-up">
+        <div class="section-content">
+            <h2>Supporto e Documentazione</h2>
+            <p>
+                Per ulteriori dettagli sull'uso dei comandi, configurazioni avanzate o per segnalare eventuali problemi, puoi consultare la documentazione inclusa o contattare il supporto tramite il <a href="https://discord.gg/syq98Cyryx" class="support-link">server Discord ufficiale di FactionBot</a>.
+            </p>
+            <p>
+                <strong>Nota:</strong> Poiché FactionBot è ancora in fase di sviluppo, ti invitiamo a unirti al nostro server Discord per ricevere aggiornamenti, fornire feedback e contribuire al miglioramento del bot.
+            </p>
+        </div>
     </section>
 
     <!-- Terms of Service Section -->
-    <section class="section" id="tos">
-        <h2>Terms of Service</h2>
-        <p>
-            <strong>Accettazione dei Termini</strong><br>
-            Utilizzando FactionBot, accetti di rispettare i presenti Termini di Servizio. Se non sei d'accordo con questi termini, ti preghiamo di non utilizzare il bot.
-        </p>
-        <p>
-            <strong>Uso del Bot</strong><br>
-            FactionBot è progettato per essere utilizzato nei server Discord per la gestione finanziaria all'interno di contesti a tema criminale o giochi di ruolo. È responsabilità dell'amministratore del server assicurarsi che l'uso del bot sia conforme alle regole di Discord e alle leggi locali.
-        </p>
-        <p>
-            <strong>Limitazione di Responsabilità</strong><br>
-            FactionBot non è responsabile per eventuali perdite o danni derivanti dall'uso del bot. Gli amministratori del server sono responsabili della gestione e della sicurezza dei dati finanziari all'interno del loro server.
-        </p>
-        <p>
-            <strong>Modifiche ai Termini</strong><br>
-            Ci riserviamo il diritto di modificare questi Termini di Servizio in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina e l'uso continuato del bot costituirà accettazione delle modifiche.
-        </p>
+    <section class="section" id="tos" data-aos="fade-up">
+        <div class="section-content">
+            <h2>Terms of Service</h2>
+            <p>
+                <strong>Accettazione dei Termini</strong><br>
+                Utilizzando FactionBot, accetti di rispettare i presenti Termini di Servizio. Se non sei d'accordo con questi termini, ti preghiamo di non utilizzare il bot.
+            </p>
+            <p>
+                <strong>Uso del Bot</strong><br>
+                FactionBot è progettato per essere utilizzato nei server Discord per la gestione finanziaria all'interno di contesti a tema criminale o giochi di ruolo. È responsabilità dell'amministratore del server assicurarsi che l'uso del bot sia conforme alle regole di Discord e alle leggi locali.
+            </p>
+            <p>
+                <strong>Limitazione di Responsabilità</strong><br>
+                FactionBot non è responsabile per eventuali perdite o danni derivanti dall'uso del bot. Gli amministratori del server sono responsabili della gestione e della sicurezza dei dati finanziari all'interno del loro server.
+            </p>
+            <p>
+                <strong>Modifiche ai Termini</strong><br>
+                Ci riserviamo il diritto di modificare questi Termini di Servizio in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina e l'uso continuato del bot costituirà accettazione delle modifiche.
+            </p>
+        </div>
     </section>
 
     <!-- Privacy Policy Section -->
-    <section class="section" id="privacy">
-        <h2>Privacy Policy</h2>
-        <p>
-            <strong>Raccolta dei Dati</strong><br>
-            FactionBot raccoglie dati necessari per il funzionamento del bot, inclusi i dati dei membri del server, i ruoli e le informazioni finanziarie relative alle rapine e agli stipendi.
-        </p>
-        <p>
-            <strong>Utilizzo dei Dati</strong><br>
-            I dati raccolti vengono utilizzati esclusivamente per fornire e migliorare i servizi offerti da FactionBot. Non condivideremo i tuoi dati con terze parti senza il tuo consenso, salvo quanto richiesto dalla legge.
-        </p>
-        <p>
-            <strong>Sicurezza dei Dati</strong><br>
-            Adottiamo misure di sicurezza adeguate per proteggere i dati da accessi non autorizzati, alterazioni, divulgazioni o distruzioni.
-        </p>
-        <p>
-            <strong>Diritti degli Utenti</strong><br>
-            Hai il diritto di accedere, correggere o richiedere la cancellazione dei tuoi dati personali in qualsiasi momento. Per esercitare questi diritti, contattaci tramite il server Discord ufficiale di FactionBot.
-        </p>
-        <p>
-            <strong>Modifiche alla Privacy Policy</strong><br>
-            Ci riserviamo il diritto di aggiornare questa Privacy Policy in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina e l'uso continuato del bot costituirà accettazione delle modifiche.
-        </p>
+    <section class="section" id="privacy" data-aos="fade-up">
+        <div class="section-content">
+            <h2>Privacy Policy</h2>
+            <p>
+                <strong>Raccolta dei Dati</strong><br>
+                FactionBot raccoglie dati necessari per il funzionamento del bot, inclusi i dati dei membri del server, i ruoli e le informazioni finanziarie relative alle rapine e agli stipendi.
+            </p>
+            <p>
+                <strong>Utilizzo dei Dati</strong><br>
+                I dati raccolti vengono utilizzati esclusivamente per fornire e migliorare i servizi offerti da FactionBot. Non condivideremo i tuoi dati con terze parti senza il tuo consenso, salvo quanto richiesto dalla legge.
+            </p>
+            <p>
+                <strong>Sicurezza dei Dati</strong><br>
+                Adottiamo misure di sicurezza adeguate per proteggere i dati da accessi non autorizzati, alterazioni, divulgazioni o distruzioni.
+            </p>
+            <p>
+                <strong>Diritti degli Utenti</strong><br>
+                Hai il diritto di accedere, correggere o richiedere la cancellazione dei tuoi dati personali in qualsiasi momento. Per esercitare questi diritti, contattaci tramite il server Discord ufficiale di FactionBot.
+            </p>
+            <p>
+                <strong>Modifiche alla Privacy Policy</strong><br>
+                Ci riserviamo il diritto di aggiornare questa Privacy Policy in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina e l'uso continuato del bot costituirà accettazione delle modifiche.
+            </p>
+        </div>
     </section>
 
 </div>
 
-<footer>
+<footer data-aos="fade-up">
     <p>&copy; 2024 FactionBot. Tutti i diritti riservati.</p>
 </footer>
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+    });
+</script>
+
+<!-- JavaScript per l'Effetto Ripple -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.button');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const diameter = Math.max(button.clientWidth, button.clientHeight);
+                const radius = diameter / 2;
+
+                ripple.style.width = ripple.style.height = `${diameter}px`;
+                ripple.style.left = `${e.clientX - button.getBoundingClientRect().left - radius}px`;
+                ripple.style.top = `${e.clientY - button.getBoundingClientRect().top - radius}px`;
+                ripple.classList.add('ripple');
+
+                const existingRipple = button.getElementsByClassName('ripple')[0];
+                if (existingRipple) {
+                    existingRipple.remove();
+                }
+
+                button.appendChild(ripple);
+            });
+        });
+    });
+
+    // JavaScript per il Toggle Modalità Scura/Chiara
+    const themeSwitch = document.getElementById('theme-switch');
+    themeSwitch.addEventListener('change', () => {
+        document.body.classList.toggle('dark-theme');
+    });
+</script>
+
+</body>
+</html>
